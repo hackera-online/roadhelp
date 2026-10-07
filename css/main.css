@@ -1,0 +1,8 @@
+/* Обединен CSS импорт */
+@import url('./tokens.css');
+@import url('./base.css');
+@import url('./components/buttons.css');
+@import url('./components/lists.css');
+@import url('./components/hero.css');
+@import url('./components/services.css');
+@import url('./components/calculator.css');
