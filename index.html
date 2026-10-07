@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RoadHelp – Денонощна пътна помощ и паяк за София и страната</title>
+<meta name="description" content="Денонощна пътна помощ и репатриране с паяк за София и страната. Обадете се на 0887 337 264.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--dark:#0d2f5e;--dark3:#081f3f;--pri:#1551a1;--acc:#fd7800;--acc2:#d96500;--ink:#17212f;--ink2:#566275;--soft:#f3f6fa;--line:#dbe4ee;--bg:#fff;--card:#fff;--t:'Inter',system-ui,sans-serif}
+:root[data-theme=dark]{--ink:#e8eef6;--ink2:#a5b2c4;--soft:#0f1a2b;--line:#24344d;--bg:#0b1422;--card:#12203a}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--ink:#e8eef6;--ink2:#a5b2c4;--soft:#0f1a2b;--line:#24344d;--bg:#0b1422;--card:#12203a}}
+*{box-sizing:border-box}
+html{height:auto;scroll-behavior:smooth;scroll-padding-top:90px;padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--t);overflow-x:hidden}
+h1,h2,h3,p{margin:0}a{color:inherit;text-decoration:none}
+.w{width:min(1140px,100% - 40px);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 26px;border-radius:8px;font:700 15px var(--t);border:2px solid transparent;cursor:pointer;transition:.2s}
+.b1{background:var(--acc);color:#fff}.b1:hover{background:var(--acc2)}
+.b2{border-color:rgba(255,255,255,.7);color:#fff;background:transparent}.b2:hover{background:#fff;color:var(--dark)}
+.top{background:var(--dark3);color:#fff;font-size:13.5px}
+.top .w{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:8px 0}
+.top b{color:var(--acc)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
+header .w{display:flex;align-items:center;justify-content:space-between;min-height:70px;gap:16px}
+.logo{font-weight:800;font-size:24px;color:var(--pri);letter-spacing:-.02em}.logo span{color:var(--acc)}
+nav{display:flex;gap:4px}nav a{padding:10px 13px;font-weight:600;font-size:14.5px}nav a:hover{color:var(--acc)}
+@media(max-width:880px){nav{display:none}}
+.hero{background:linear-gradient(120deg,var(--dark3),var(--dark) 60%,var(--pri));color:#fff;border-bottom:4px solid var(--acc)}
+.hg{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:72px 0}
+@media(max-width:900px){.hg{grid-template-columns:1fr;padding:48px 0}}
+.eb{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}
+h1{font-size:clamp(32px,4.6vw,54px);line-height:1.1;font-weight:800;letter-spacing:-.025em;margin-top:14px}
+.lead{font-size:18px;color:rgba(255,255,255,.86);margin-top:18px;max-width:52ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.bd{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:28px;font-size:14px;color:rgba(255,255,255,.9)}
+.bd span::before{content:"✓ ";color:var(--acc);font-weight:800}
+.q{background:var(--card);color:var(--ink);border-radius:12px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(0,0,0,.6)}
+.q h3{padding:18px 22px;background:var(--soft);border-bottom:1px solid var(--line);font-size:17px}
+.q h3 small{display:block;font-weight:500;color:var(--ink2);font-size:13px}
+.qb{padding:20px 22px 22px;display:grid;gap:14px}
+.qb label{display:grid;gap:6px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2)}
+select{font:500 15px var(--t);padding:12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);width:100%}
+.qb .btn{width:100%}.qb .b3{background:var(--pri);color:#fff}
+.sec{padding:80px 0}.alt{background:var(--soft)}
+h2{font-size:clamp(26px,3.2vw,38px);line-height:1.15;font-weight:800;letter-spacing:-.02em;margin-top:10px;max-width:20em}
+.sl{color:var(--ink2);margin-top:12px;max-width:60ch;font-size:17px}
+.eb.d{color:var(--acc2)}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+@media(max-width:900px){.g3{grid-template-columns:1fr}}
+.sv{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--pri);border-radius:8px;padding:28px}
+.sv:nth-child(2){border-top-color:var(--acc)}.sv:nth-child(3){border-top-color:var(--dark)}
+.sv h3{font-size:20px;margin-bottom:8px}.sv p{color:var(--ink2);font-size:15px}
+.sv ul{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:6px;font-size:14.5px}
+.sv li::before{content:"–  ";color:var(--acc);font-weight:800}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px;padding:0;list-style:none}
+@media(max-width:860px){.g4{grid-template-columns:1fr 1fr}}@media(max-width:520px){.g4{grid-template-columns:1fr}}
+.st{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px}
+.st i{display:grid;place-items:center;width:40px;height:40px;border-radius:8px;background:var(--pri);color:#fff;font-style:normal;font-weight:800}
+.st:last-child i{background:var(--acc)}
+.st h3{font-size:18px;margin:14px 0 6px}.st p{font-size:14.5px;color:var(--ink2)}
+.dg{display:grid;grid-template-columns:1fr 440px;gap:48px;align-items:start}
+@media(max-width:940px){.dg{grid-template-columns:1fr}}
+.chat{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 22px 44px -26px rgba(13,47,94,.5)}
+.ct{display:flex;align-items:center;gap:10px;padding:13px 16px;background:var(--dark);color:#fff;font-weight:700;font-size:15px}
+.ct small{font-weight:500;opacity:.8;margin-left:auto}
+.cb{height:360px;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:var(--soft)}
+.bub{max-width:88%;padding:10px 14px;font-size:14.5px;line-height:1.5;border-radius:10px;white-space:pre-line}
+.bub.v{align-self:flex-end;background:var(--dark);color:#fff}
+.bub.a{align-self:flex-start;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--acc)}
+.opts{display:flex;flex-direction:column;gap:6px}
+.opts button{text-align:left;font:600 13.5px var(--t);color:var(--pri);background:var(--card);border:1px solid var(--pri);border-radius:8px;padding:10px 12px;cursor:pointer}
+.opts button:hover{background:var(--pri);color:#fff}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;max-width:860px;margin-top:10px}
+summary{cursor:pointer;padding:18px 22px;font-weight:700;list-style:none;display:flex;justify-content:space-between}
+summary::after{content:"+";color:var(--acc);font-size:22px;line-height:1}details[open] summary::after{content:"−"}
+details p{padding:0 22px 18px;color:var(--ink2);font-size:15px}
+.band{background:var(--dark);color:#fff;border-top:4px solid var(--acc)}
+.band .w{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:48px 0}
+.band h2{margin:0;color:#fff}.band p{color:rgba(255,255,255,.82);margin-top:8px}
+footer{background:var(--dark3);color:rgba(255,255,255,.78);padding:44px 0 120px;font-size:14.5px}
+footer .w{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+@media(max-width:800px){footer .w{grid-template-columns:1fr}}
+footer b{color:#fff;display:block;margin-bottom:10px}footer a:hover{color:var(--acc)}
+.cp{width:min(1140px,100% - 40px);margin:28px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.16);font-size:12.5px}
+.fl{position:fixed;z-index:60;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;align-items:flex-end;gap:10px;max-width:calc(100% - 24px)}
+.fp{width:min(370px,100vw - 28px);display:none}.fp.open{display:flex}.fp .cb{height:min(330px,46vh)}
+.fr{display:flex;gap:10px}
+.fb,.fc{height:56px;border-radius:16px;border:0;cursor:pointer;color:#fff;font:700 15px var(--t);display:flex;align-items:center;justify-content:center;gap:8px;padding:0 20px}
+.fb{background:var(--pri);padding:0 18px;font-size:15px}.fc{background:var(--acc)}
+</style>
+</head>
+<body>
+<div class="top"><div class="w"><span><b>Денонощно</b> · 24/7 · София и страната</span><span>С включена застраховка при превоз</span></div></div>
+<header id="top"><div class="w">
+<a class="logo" href="#top">Road<span>Help</span></a>
+<nav><a href="#uslugi">Услуги</a><a href="#kak">Как работим</a><a href="#asistent">Асистент</a><a href="#faq">Въпроси</a><a href="#kontakti">Контакти</a></nav>
+<a class="btn b1" href="tel:+359887337264">0887 337 264</a>
+</div></header>
+
+<section class="hero"><div class="w hg">
+<div>
+<span class="eb">Денонощна пътна помощ</span>
+<h1>Закъсахте на пътя? Помощта е на един телефон</h1>
+<p class="lead">Репатриране с паяк, превоз на леки и товарни автомобили и съдействие при авария – в София и из цялата страна, денонощно.</p>
+<div class="cta"><a class="btn b1" href="tel:+359887337264">Обадете се сега</a><a class="btn b2" href="#uslugi">Вижте услугите</a></div>
+<div class="bd"><span>Работим 24/7</span><span>Застраховка при превоз</span><span>Леки и товарни</span></div>
+</div>
+<div class="q">
+<h3>Опишете проблема<small>Асистентът ще Ви насочи, а за спешен случай звъннете</small></h3>
+<div class="qb">
+<label>Какво се случи?<select id="qp"><option>Авария / не запалва</option><option>Катастрофа</option><option>Паднал акумулатор</option><option>Спукана гума</option><option>Заседнал автомобил</option><option>Нужен е превоз до сервиз</option></select></label>
+<label>Превозно средство<select id="qv"><option>лек автомобил</option><option>джип / SUV</option><option>бус</option><option>товарен автомобил</option></select></label>
+<button class="btn b3" id="qgo" type="button">Попитай асистента</button>
+<a class="btn b1" href="tel:+359887337264">Обади се: 0887 337 264</a>
+</div></div>
+</div></section>
+
+<section class="sec" id="uslugi"><div class="w">
+<span class="eb d">Услуги</span><h2>Всичко, от което се нуждаете на пътя</h2>
+<p class="sl">Пътна помощ за леки и товарни автомобили, репатриране и съдействие при повреда или катастрофа.</p>
+<div class="g3">
+<article class="sv"><h3>Репатриране с паяк</h3><p>Безопасно товарене и превоз на автомобила до избран сервиз или адрес.</p><ul><li>София и цялата страна</li><li>Включена застраховка при превоз</li><li>Лек автомобил, джип, бус</li></ul></article>
+<article class="sv"><h3>Товарни автомобили</h3><p>Пътна помощ и репатриране на по-тежки превозни средства.</p><ul><li>Пикапи и бусове</li><li>Линейки и специализирани</li><li>Товарни автомобили</li></ul></article>
+<article class="sv"><h3>Съдействие на място</h3><p>При дребни проблеми помощта често започва още на мястото на спиране.</p><ul><li>Паднал акумулатор</li><li>Проблем с гума</li><li>Заседнал автомобил</li></ul></article>
+</div></div></section>
+
+<section class="sec alt" id="kak"><div class="w">
+<span class="eb d">Как работим</span><h2>От обаждането до безопасното място</h2>
+<ol class="g4">
+<li class="st"><i>1</i><h3>Обаждате се</h3><p>На 0887 337 264, по всяко време на денонощието.</p></li>
+<li class="st"><i>2</i><h3>Описвате ситуацията</h3><p>Къде сте, какъв е автомобилът и какво се е случило.</p></li>
+<li class="st"><i>3</i><h3>Екипът идва</h3><p>Изпращаме подходящата техника към Вас.</p></li>
+<li class="st"><i>4</i><h3>Превоз до адрес</h3><p>Автомобилът пристига на избран сервиз или адрес.</p></li>
+</ol></div></section>
+
+<section class="sec" id="asistent"><div class="w dg">
+<div><span class="eb d">AI асистент</span><h2>Бързи отговори, преди да звъннете</h2><p class="sl">Асистентът отговаря на въпроси за услугите и насочва към телефона за спешни случаи. Опитайте с бутоните, той е и в долния десен ъгъл.</p></div>
+<div class="chat"><div class="ct">Асистент на RoadHelp <small>онлайн</small></div><div class="cb" id="cb"></div></div>
+</div></section>
+
+<section class="sec alt" id="faq"><div class="w">
+<span class="eb d">Въпроси</span><h2>Често задавани въпроси</h2>
+<details open><summary>Работите ли денонощно?</summary><p>Да, пътната помощ е денонощна. За спешен случай се обадете на 0887 337 264.</p></details>
+<details><summary>Работите ли извън София?</summary><p>Да, обслужваме София и страната.</p></details>
+<details><summary>Има ли застраховка при превоз?</summary><p>Да, при превоз е включена застраховка.</p></details>
+<details><summary>Превозвате ли товарни автомобили?</summary><p>Да, репатрираме леки и товарни автомобили, бусове, пикапи и линейки.</p></details>
+<details><summary>Колко струва услугата?</summary><p>Цената зависи от разстоянието и вида на автомобила. Обадете се за точна оферта.</p></details>
+</div></section>
+
+<section class="band"><div class="w"><div><h2>Нуждаете се от помощ сега?</h2><p>Обадете се по всяко време – денонощно, 24/7.</p></div><a class="btn b1" href="tel:+359887337264">0887 337 264</a></div></section>
+
+<footer id="kontakti"><div class="w">
+<div><b style="font-size:22px">RoadHelp</b>Денонощна пътна помощ и паяк за София и страната.</div>
+<div><b>Контакти</b><a href="tel:+359887337264">0887 337 264</a><br><a href="mailto:repatrakbulgaria@mail.bg">repatrakbulgaria@mail.bg</a></div>
+<div><b>Услуги</b>Репатриране с паяк<br>Пътна помощ<br>Товарни автомобили</div>
+</div><div class="cp">© 2026 RoadHelp – Пътна помощ. Всички права запазени.</div></footer>
+
+<div class="fl"><div class="chat fp" id="fp"><div class="ct">Асистент <small>RoadHelp</small></div><div class="cb" id="wb"></div></div>
+<div class="fr"><a class="fc" href="tel:+359887337264">Позвъни</a><button class="fb" id="fb" type="button" aria-label="Чат">Чат</button></div></div>
+
+<script>
+var WEL='Здравейте! Аз съм асистентът на RoadHelp. С какво мога да помогна?';
+var OPTS=['Закъсах на пътя, какво да правя?','Работите ли денонощно?','Превозвате ли товарни автомобили?','Каква е цената?'];
+var ANS=['Обадете се веднага на 0887 337 264. Ако сте на пътя, включете аварийните светлини и излезте на безопасно място. Не изпращайте лични данни в чата.','Да, пътната помощ е денонощна, за София и страната.','Да, репатрираме леки и товарни автомобили, бусове, пикапи и линейки. При превоз има включена застраховка.','Цената зависи от разстоянието и вида на автомобила. Обадете се на 0887 337 264 за точна оферта.'];
+function bub(b,c,t){var e=document.createElement('div');e.className='bub '+c;e.textContent=t;b.appendChild(e);b.scrollTop=b.scrollHeight}
+function mk(b){bub(b,'a',WEL);opts(b)}
+function opts(b){var o=document.createElement('div');o.className='opts';OPTS.forEach(function(t,i){var x=document.createElement('button');x.type='button';x.textContent=t;x.onclick=function(){say(b,t,ANS[i])};o.appendChild(x)});b.appendChild(o);b.scrollTop=b.scrollHeight}
+function say(b,q,a){b.querySelectorAll('.opts').forEach(function(x){x.remove()});bub(b,'v',q);setTimeout(function(){bub(b,'a',a);opts(b)},500)}
+var cb=document.getElementById('cb'),wb=document.getElementById('wb'),fp=document.getElementById('fp');
+mk(cb);mk(wb);
+document.getElementById('fb').onclick=function(){fp.classList.toggle('open')};
+document.getElementById('qgo').onclick=function(){fp.classList.add('open');
+say(wb,'Проблем: '+document.getElementById('qp').value.toLowerCase()+', '+document.getElementById('qv').value+'.','Разбирам. За най-бърза помощ се обадете на 0887 337 264. Ще Ви насочат за точното място и необходимата техника.')};
+</script>
+</body>
+</html>
